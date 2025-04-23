@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Veille technologique - Blazor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+  <h1>Veille technologique - Blazor</h1>
+  <h3>Présentation du groupe F</h3>
+</section>
+
+<section>
+    <img src="img/1.png" alt="logo">
+  <h2> Introduction à Blazor</h2>
+  <p><strong>Blazor</strong> est un framework web open source développé par <strong>Microsoft</strong>, qui permet de créer des applications web interactives côté client en utilisant <strong>C#</strong> au lieu de JavaScript.</p>
+  <p>Il fait partie de l'écosystème <strong>ASP.NET Core</strong> et repose sur le moteur .NET.</p>
+</section>
+
+<section>
+  <h2> Historique et évolution</h2>
+  <ul>
+    <li>📅 Créé en <strong>2018</strong> par Microsoft en tant que projet expérimental</li>
+    <li>🚀 Intégré officiellement dans <strong>ASP.NET Core 3.0</strong> en 2019</li>
+    <li>📦 Depuis .NET 5, Blazor est pleinement supporté et amélioré à chaque version</li>
+    <li>🔄 Dernière version stable : <strong>.NET 8 (2023)</strong></li>
+    <li>🧭 Objectif : permettre le développement full-stack en C#</li>
+  </ul>
+</section>
+
+<section>
+  <h2> Pourquoi choisir Blazor ?</h2>
+  <ul>
+    <li>✅ Un seul langage pour le frontend et le backend : <strong>C#</strong></li>
+    <li>✅ Intégration directe avec .NET, Entity Framework, LINQ...</li>
+    <li>✅ Réutilisation du code entre client/serveur</li>
+    <li>✅ Sécurité, productivité, performance</li>
+    <li>✅ Idéal pour les équipes .NET existantes</li>
+  </ul>
+</section>
+
+<section>
+  <h2> Modèles Blazor : WebAssembly vs Server</h2>
+  <ul>
+    <li><strong>Blazor WebAssembly (WASM)</strong> :
+      <ul>
+        <li>Exécution du code C# dans le navigateur via WebAssembly</li>
+        <li>Application 100% côté client</li>
+        <li>Pas besoin de serveur une fois déployée</li>
+      </ul>
+    </li>
+    <li><strong>Blazor Server</strong> :
+      <ul>
+        <li>Le rendu se fait côté serveur</li>
+        <li>SignalR est utilisé pour la communication en temps réel</li>
+        <li>Moins rapide mais plus léger au chargement initial</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2> Fonctionnement général</h2>
+  <ul>
+    <li>🔁 Modèle basé sur les composants Razor (.razor)</li>
+    <li>⚙️ Composants dynamiques avec C#, HTML et binding de données</li>
+    <li>🧠 Interopérabilité JavaScript possible si nécessaire</li>
+    <li>🔒 Gestion intégrée des routes, événements et authentification</li>
+  </ul>
+</section>
+
+<section>
+  <h2> Installation et premiers pas</h2>
+  <ul>
+    <li>📦 Prérequis : <a href="https://dotnet.microsoft.com/en-us/download" target="_blank">.NET SDK 6 ou supérieur</a></li>
+    <li>💻 Outils : Visual Studio / VS Code / Terminal</li>
+  </ul>
+  <p><strong>Créer un projet Blazor WebAssembly :</strong></p>
+  <pre><code>dotnet new blazorwasm -o MonAppBlazor</code></pre>
+
+  <p><strong>Créer un projet Blazor Server :</strong></p>
+  <pre><code>dotnet new blazorserver -o MonAppBlazorServer</code></pre>
+
+  <p><strong>Lancer l’application :</strong></p>
+  <pre><code>cd MonAppBlazor
+dotnet run</code></pre>
+</section>
+
+<section>
+  <h2> Exemple de composant Blazor</h2>
+  <p>Composant simple (compteur interactif) :</p>
+  <pre><code>@page "/counter"
+
+&lt;h3&gt;Compteur Blazor&lt;/h3&gt;
+&lt;p&gt;Valeur actuelle : @count&lt;/p&gt;
+&lt;button class="btn btn-primary" @onclick="Incrementer"&gt;+1&lt;/button&gt;
+
+@code {
+    int count = 0;
+    void Incrementer() {
+        count++;
+    }
+}</code></pre>
+</section>
+
+<section>
+  <h2>8. Comparaison avec d'autres frameworks</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Framework</th><th>Langage</th><th>Client-side</th><th>Serveur requis</th>
+    </tr>
+    <tr>
+      <td>Blazor WASM</td><td>C#</td><td>✔️</td><td>Non</td>
+    </tr>
+    <tr>
+      <td>React</td><td>JavaScript</td><td>✔️</td><td>Non</td>
+    </tr>
+    <tr>
+      <td>Angular</td><td>TypeScript</td><td>✔️</td><td>Non</td>
+    </tr>
+    <tr>
+      <td>Blazor Server</td><td>C#</td><td>❌</td><td>Oui</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2> Cas d'utilisation concrets</h2>
+  <ul>
+    <li>📁 Portails d’administration d’entreprise (CRM, ERP)</li>
+    <li>📊 Tableaux de bord dynamiques</li>
+    <li>🛒 Applications e-commerce</li>
+    <li>📱 Progressive Web Apps (PWA) avec Blazor WASM</li>
+    <li>🎓 Projets éducatifs et prototypage rapide</li>
+  </ul>
+</section>
+
+<section>
+  <h2> Ressources et communauté</h2>
+  <ul>
+    <li><a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor" target="_blank">🔗 Site officiel Blazor</a></li>
+    <li><a href="https://learn.microsoft.com/fr-fr/aspnet/core/blazor/" target="_blank">📘 Documentation Blazor</a></li>
+    <li><a href="https://github.com/dotnet/blazor" target="_blank">💻 Blazor sur GitHub</a></li>
+    <li><a href="https://stackoverflow.com/questions/tagged/blazor" target="_blank">❓ Stack Overflow - Blazor</a></li>
+    <li><a href="https://discord.gg/dotnet" target="_blank">💬 Discord .NET Community</a></li>
+    <li><a href="https://dev.to/t/blazor" target="_blank">📰 DEV.to - Articles Blazor</a></li>
+    <li><a href="https://www.youtube.com/c/dotNET" target="_blank">🎥 YouTube .NET</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2> Conclusion</h2>
+  <p>Blazor représente une évolution majeure dans le développement web en permettant aux développeurs .NET de créer des interfaces riches et interactives sans quitter l'univers C#. Grâce à ses deux modes de fonctionnement (WebAssembly et Server), Blazor offre une grande flexibilité selon les besoins des projets.</p>
+  <p>Sa montée en puissance dans l’écosystème Microsoft et son intégration avec Visual Studio en font une technologie d’avenir, surtout pour les entreprises déjà ancrées dans l’environnement .NET. Que ce soit pour des dashboards, des applications professionnelles ou des PWAs, Blazor est une solution moderne, robuste et en constante évolution.</p>
+  
+</section>
+<script>
+  /* Script pour ajouter un bouton retour en haut de page après chargement du DOM */
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ajout du bouton retour en haut
+    var topButton = document.createElement('a');
+    topButton.className = 'nav-top';
+    topButton.href = '#';
+    document.body.appendChild(topButton);
+    
+    // Afficher/cacher le bouton en fonction du défilement
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        topButton.classList.add('visible');
+      } else {
+        topButton.classList.remove('visible');
+      }
+    });
+  });
+</script>
+</body>
+</html>
